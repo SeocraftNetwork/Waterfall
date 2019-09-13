@@ -1,0 +1,43 @@
+From beed2a3b9d85348e9882d20f4c487bdcf73c8745 Mon Sep 17 00:00:00 2001
+From: TomateDeveloper <ianfe@martina.com.co>
+Date: Thu, 12 Sep 2019 20:35:44 -0500
+Subject: [PATCH] Registered with protected binder and updated PluginModule
+ protection
+
+
+diff --git a/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java b/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
+index ac49dcd4..3eed4354 100644
+--- a/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
++++ b/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
+@@ -24,7 +24,10 @@ import java.util.Stack;
+ import java.util.jar.JarEntry;
+ import java.util.jar.JarFile;
+ import java.util.logging.Level;
++
++import com.google.inject.AbstractModule;
+ import lombok.RequiredArgsConstructor;
++import me.fixeddev.inject.ProtectedBinder;
+ import me.fixeddev.inject.ProtectedModule;
+ import net.md_5.bungee.api.ChatColor;
+ import net.md_5.bungee.api.CommandSender;
+@@ -41,7 +44,7 @@ import org.yaml.snakeyaml.introspector.PropertyUtils;
+  * example event handling and plugin management.
+  */
+ @RequiredArgsConstructor
+-public class PluginManager extends ProtectedModule
++public class PluginManager extends AbstractModule
+ {
+ 
+     /*========================================================================*/
+@@ -505,7 +508,7 @@ public class PluginManager extends ProtectedModule
+     {
+         for ( Plugin plugin : plugins.values() )
+         {
+-            install( plugin );
++            ProtectedBinder.newProtectedBinder( binder() ).install( plugin );
+         }
+     }
+ }
+-- 
+2.22.0.windows.1
+

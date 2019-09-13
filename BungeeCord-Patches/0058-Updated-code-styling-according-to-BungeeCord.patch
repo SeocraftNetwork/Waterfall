@@ -1,0 +1,37 @@
+From 4d5df52e50ff040f3eddcce9025509888aa51dde Mon Sep 17 00:00:00 2001
+From: TomateDeveloper <ianfe@martina.com.co>
+Date: Thu, 12 Sep 2019 21:35:20 -0500
+Subject: [PATCH] Updated code styling according to BungeeCord
+
+
+diff --git a/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java b/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
+index d007a1fe..ae610dc4 100644
+--- a/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
++++ b/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
+@@ -508,7 +508,7 @@ public class PluginManager extends AbstractModule
+     {
+         for ( Plugin plugin : plugins.values() )
+         {
+-            ProtectedBinder.newProtectedBinder(binder()).install(new PluginModule(plugin));
++            ProtectedBinder.newProtectedBinder( binder() ).install( new PluginModule( plugin ) );
+         }
+     }
+ }
+diff --git a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java b/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
+index 19d0be2b..71009006 100644
+--- a/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
++++ b/proxy/src/main/java/net/md_5/bungee/BungeeCord.java
+@@ -286,8 +286,8 @@ public class BungeeCord extends ProxyServer
+ 
+         isRunning = true;
+ 
+-        injector = Guice.createInjector(Stage.PRODUCTION, pluginManager);
+-        injector.injectMembers(this);
++        injector = Guice.createInjector( Stage.PRODUCTION, pluginManager );
++        injector.injectMembers( this );
+ 
+         pluginManager.enablePlugins();
+ 
+-- 
+2.22.0.windows.1
+

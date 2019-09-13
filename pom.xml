@@ -16,6 +16,17 @@
         <module>Waterfall-Proxy</module>
     </modules>
 
+    <distributionManagement>
+        <repository>
+            <id>gamma-releases</id>
+            <url>https://repo.seocraft.net/repository/gamma-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>gamma-snapshots</id>
+            <url>https://repo.seocraft.net/repository/gamma-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <defaultGoal>clean install</defaultGoal>
     </build>

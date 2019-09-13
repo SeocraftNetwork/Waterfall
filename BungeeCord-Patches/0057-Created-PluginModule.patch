@@ -1,0 +1,80 @@
+From 04f361736dbbcc727672af45daf2c825b46bd4f6 Mon Sep 17 00:00:00 2001
+From: TomateDeveloper <ianfe@martina.com.co>
+Date: Thu, 12 Sep 2019 21:33:35 -0500
+Subject: [PATCH] Created PluginModule
+
+
+diff --git a/api/src/main/java/net/md_5/bungee/api/plugin/Plugin.java b/api/src/main/java/net/md_5/bungee/api/plugin/Plugin.java
+index 0da1fcd2..1a277651 100644
+--- a/api/src/main/java/net/md_5/bungee/api/plugin/Plugin.java
++++ b/api/src/main/java/net/md_5/bungee/api/plugin/Plugin.java
+@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutorService;
+ import java.util.concurrent.Executors;
+ import java.util.logging.Logger;
+ import lombok.Getter;
++import me.fixeddev.inject.ProtectedBinder;
+ import me.fixeddev.inject.ProtectedModule;
+ import net.md_5.bungee.api.ProxyServer;
+ import net.md_5.bungee.api.config.ConfigurationAdapter;
+@@ -16,7 +17,7 @@ import net.md_5.bungee.api.scheduler.GroupedThreadFactory;
+  * Represents any Plugin that may be loaded at runtime to enhance existing
+  * functionality.
+  */
+-public class Plugin extends ProtectedModule
++public class Plugin
+ {
+ 
+     @Getter
+@@ -110,4 +111,9 @@ public class Plugin extends ProtectedModule
+         return service;
+     }
+     //
++
++    public void configure(ProtectedBinder binder)
++    {
++
++    }
+ }
+diff --git a/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java b/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
+index 3eed4354..d007a1fe 100644
+--- a/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
++++ b/api/src/main/java/net/md_5/bungee/api/plugin/PluginManager.java
+@@ -508,7 +508,7 @@ public class PluginManager extends AbstractModule
+     {
+         for ( Plugin plugin : plugins.values() )
+         {
+-            ProtectedBinder.newProtectedBinder( binder() ).install( plugin );
++            ProtectedBinder.newProtectedBinder(binder()).install(new PluginModule(plugin));
+         }
+     }
+ }
+diff --git a/api/src/main/java/net/md_5/bungee/api/plugin/PluginModule.java b/api/src/main/java/net/md_5/bungee/api/plugin/PluginModule.java
+new file mode 100644
+index 00000000..9f258f56
+--- /dev/null
++++ b/api/src/main/java/net/md_5/bungee/api/plugin/PluginModule.java
+@@ -0,0 +1,21 @@
++package net.md_5.bungee.api.plugin;
++
++import me.fixeddev.inject.ProtectedModule;
++
++public class PluginModule extends ProtectedModule
++{
++
++    private Plugin plugin;
++
++    public PluginModule(Plugin plugin)
++    {
++        this.plugin = plugin;
++    }
++
++    @Override
++    public void configure()
++    {
++        bind( Plugin.class ).toInstance( plugin );
++        plugin.configure( binder() );
++    }
++}
+-- 
+2.22.0.windows.1
+

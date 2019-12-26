@@ -1,0 +1,30 @@
+From 364a4bd364876192525fb1e30daa92be660fbd26 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ian=20Felipe=20Casta=C3=B1o=20Martinez?=
+ <ianfe@MacBook-Pro-de-Ian.local>
+Date: Thu, 26 Dec 2019 15:26:09 -0500
+Subject: [PATCH] Modified pom structure
+
+
+diff --git a/pom.xml b/pom.xml
+index d95679fe..fa29e248 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -6,13 +6,12 @@
+     <parent>
+         <groupId>io.github.waterfallmc</groupId>
+         <artifactId>waterfall-super</artifactId>
+-        <version>dev-SNAPSHOT</version>
++        <version>1.0</version>
+         <relativePath>../pom.xml</relativePath>
+     </parent>
+ 
+-    <groupId>io.github.waterfallmc</groupId>
+     <artifactId>waterfall-parent</artifactId>
+-    <version>1.14-SNAPSHOT</version>
++    <version>1.0</version>
+     <packaging>pom</packaging>
+ 
+     <name>Waterfall-Parent</name>
+-- 
+2.21.0 (Apple Git-122)
+

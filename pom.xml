@@ -18,12 +18,12 @@
 
     <distributionManagement>
         <repository>
-            <id>gamma-releases</id>
-            <url>https://repo.seocraft.net/repository/gamma-releases</url>
+            <id>seocraft-releases</id>
+            <url>https://repo.seocraft.net/repository/seocraft-releases</url>
         </repository>
         <snapshotRepository>
-            <id>gamma-snapshots</id>
-            <url>https://repo.seocraft.net/repository/gamma-snapshots</url>
+            <id>seocraft-snapshots</id>
+            <url>https://repo.seocraft.net/repository/seocraft-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 

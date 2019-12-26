@@ -1,0 +1,31 @@
+From 2e560e3f4f0f005ccb51c9ba022fa091fb8885f9 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ian=20Felipe=20Casta=C3=B1o=20Martinez?=
+ <ianfe@MacBook-Pro-de-Ian.local>
+Date: Thu, 26 Dec 2019 15:27:13 -0500
+Subject: [PATCH] updated distribution
+
+
+diff --git a/pom.xml b/pom.xml
+index fa29e248..b1fe4b36 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -79,12 +79,12 @@
+ 
+     <distributionManagement>
+         <repository>
+-            <id>papermc-releases</id>
+-            <url>https://papermc.io/repo/repository/maven-releases/</url>
++            <id>seocraft-releases</id>
++            <url>https://repo.seocraft.net/repository/seocraft-releases</url>
+         </repository>
+         <snapshotRepository>
+-            <id>papermc-snapshots</id>
+-            <url>https://papermc.io/repo/repository/maven-snapshots/</url>
++            <id>seocraft-snapshots</id>
++            <url>https://repo.seocraft.net/repository/seocraft-snapshots</url>
+         </snapshotRepository>
+     </distributionManagement>
+ 
+-- 
+2.21.0 (Apple Git-122)
+

@@ -1,4 +1,4 @@
-Waterfall [![Build Status](https://papermc.io/ci/job/Waterfall/badge/icon)](https://papermc.io/ci/job/Waterfall/)
+Waterfall 
 =========
 
 Waterfall is a fork of the well-known [BungeeCord](https://github.com/SpigotMC/BungeeCord) server teleportation suite.
@@ -29,15 +29,3 @@ Waterfall requires **Java 8** or above.
 To compile Waterfall, you need JDK8, git, bash, maven, and an internet connection.
 
 Clone this repo, run `./waterfall b` from *bash*, get jar from Waterfall-Proxy/bootstrap/target/
-
-## Join us
-
-* Feel free to open a PR! We accept contributions.
-* Join us on IRC (irc.spi.gt #paper, [webchat](http://irc.spi.gt/iris/?nick=&channels=paper)).
-* Visit our forums (https://papermc.io/forums).
-
-## Special Thanks To
-
-![YourKit-Logo](https://yourkit.com/images/yklogo.png)
-
-[YourKit](https://yourkit.com/), makers of the outstanding Java profiler, supports open source projects of all kinds with their full-featured [Java](https://yourkit.com/features/) and [.NET](https://yourkit.com/dotnet/features/) application profilers. We thank them for granting Waterfall an OSS license so that we can make our software the best it can be.

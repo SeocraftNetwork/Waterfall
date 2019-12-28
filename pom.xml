@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.waterfallmc</groupId>
+    <groupId>net.seocraft</groupId>
     <artifactId>waterfall-super</artifactId>
-    <version>1.0</version>
+    <version>1.8</version>
     <packaging>pom</packaging>
 
     <name>Waterfall-Super</name>
     <description>Super project for Waterfall.</description>
-    <url>https://github.com/WaterfallMC/Waterfall</url>
+    <url>https://github.com/SeocraftNetwork/Waterfall</url>
 
     <modules>
         <module>Waterfall-Proxy</module>

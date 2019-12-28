@@ -1,0 +1,23 @@
+From 72e2e6ee12e197308b8b3c01f8a932e17da36d24 Mon Sep 17 00:00:00 2001
+From: TomateDeveloper <ianfe@martina.com.co>
+Date: Sat, 28 Dec 2019 18:03:50 -0500
+Subject: [PATCH] Removed travis
+
+
+diff --git a/.travis.yml b/.travis.yml
+deleted file mode 100644
+index 1cd525b7..00000000
+--- a/.travis.yml
++++ /dev/null
+@@ -1,8 +0,0 @@
+-sudo: false
+-language: java
+-jdk:
+-  - openjdk7
+-  - oraclejdk7
+-  - oraclejdk8
+-notifications:
+-  email: false
+-- 
+2.22.0.windows.1
+

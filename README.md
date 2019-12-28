@@ -1,4 +1,4 @@
-Waterfall 
+Waterfall [![CircleCI](https://circleci.com/gh/SeocraftNetwork/Waterfall.svg?style=svg)](https://circleci.com/gh/SeocraftNetwork/Waterfall) 
 =========
 
 Waterfall is a fork of the well-known [BungeeCord](https://github.com/SpigotMC/BungeeCord) server teleportation suite.

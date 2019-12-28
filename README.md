@@ -1,4 +1,4 @@
-Waterfall [![CircleCI](https://circleci.com/gh/SeocraftNetwork/Waterfall.svg?style=svg)](https://circleci.com/gh/SeocraftNetwork/Waterfall) 
+Waterfall [![CircleCI](https://circleci.com/gh/SeocraftNetwork/Waterfall.svg?style=shield)](https://circleci.com/gh/SeocraftNetwork/Waterfall)  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9c3aad278ecb40278ff5399233c2f6c7)](https://www.codacy.com/gh/SeocraftNetwork/Waterfall?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SeocraftNetwork/Waterfall&amp;utm_campaign=Badge_Grade)
 =========
 
 Waterfall is a fork of the well-known [BungeeCord](https://github.com/SpigotMC/BungeeCord) server teleportation suite.

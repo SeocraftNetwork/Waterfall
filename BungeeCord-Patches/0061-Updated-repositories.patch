@@ -1,0 +1,30 @@
+From 9156b0058c74ddbc5b8387f6d277105a05809f94 Mon Sep 17 00:00:00 2001
+From: TomateDeveloper <ianfe@martina.com.co>
+Date: Wed, 18 Mar 2020 12:50:31 -0500
+Subject: [PATCH] Updated repositories
+
+
+diff --git a/pom.xml b/pom.xml
+index 4a5777f9..0858af50 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -61,12 +61,12 @@
+ 
+     <distributionManagement>
+         <repository>
+-            <id>seocraft-releases</id>
+-            <url>https://repo.seocraft.net/repository/seocraft-releases</url>
++            <id>maven-releases</id>
++            <url>https://repo.seocraft.net/repository/maven-releases</url>
+         </repository>
+         <snapshotRepository>
+-            <id>seocraft-snapshots</id>
+-            <url>https://repo.seocraft.net/repository/seocraft-snapshots</url>
++            <id>maven-snapshots</id>
++            <url>https://repo.seocraft.net/repository/maven-snapshots</url>
+         </snapshotRepository>
+     </distributionManagement>
+ 
+-- 
+2.22.0.windows.1
+
